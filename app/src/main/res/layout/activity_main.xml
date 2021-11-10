@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Connect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/lightOffButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Off"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connectButton" />
+
+    <Button
+        android:id="@+id/redButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Red"
+        app:layout_constraintStart_toEndOf="@+id/lightOffButton"
+        app:layout_constraintStart_toStartOf="@+id/lightOffButton"
+        app:layout_constraintTop_toBottomOf="@+id/lightOffButton" />
+
+    <Button
+        android:id="@+id/greenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Green"
+        app:layout_constraintStart_toEndOf="@+id/redButton"
+        app:layout_constraintTop_toTopOf="@+id/redButton" />
+
+    <Button
+        android:id="@+id/blueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Blue"
+        app:layout_constraintStart_toEndOf="@+id/greenButton"
+        app:layout_constraintTop_toTopOf="@+id/greenButton" />
+
+    <SeekBar
+        android:id="@+id/flashSpeedSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/autoSpeedSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/flashTextView" />
+
+    <TextView
+        android:id="@+id/intensityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Intensity:"
+        app:layout_constraintStart_toStartOf="@+id/flashTextView"
+        app:layout_constraintTop_toBottomOf="@+id/flashTextView" />
+
+    <SeekBar
+        android:id="@+id/intensitySeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:progress="100"
+        app:layout_constraintEnd_toEndOf="@+id/flashSpeedSeekBar"
+        app:layout_constraintStart_toStartOf="@+id/flashSpeedSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/intensityTextView" />
+
+    <SeekBar
+        android:id="@+id/smoothingSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/intensitySeekBar"
+        app:layout_constraintStart_toStartOf="@+id/intensitySeekBar"
+        app:layout_constraintTop_toTopOf="@+id/smoothTextView" />
+
+    <TextView
+        android:id="@+id/smoothTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Smoothing:"
+        app:layout_constraintStart_toStartOf="@+id/intensityTextView"
+        app:layout_constraintTop_toBottomOf="@+id/intensityTextView" />
+
+    <TextView
+        android:id="@+id/flashTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Flashing:"
+        app:layout_constraintStart_toStartOf="@+id/autoTextView"
+        app:layout_constraintTop_toBottomOf="@+id/autoTextView" />
+
+    <Button
+        android:id="@+id/whiteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="White"
+        app:layout_constraintStart_toEndOf="@+id/lightOffButton"
+        app:layout_constraintTop_toTopOf="@+id/lightOffButton" />
+
+    <SeekBar
+        android:id="@+id/autoSpeedSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="8dp"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/autoTextView"
+        app:layout_constraintTop_toTopOf="@+id/autoTextView" />
+
+    <TextView
+        android:id="@+id/autoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Auto:"
+        app:layout_constraintStart_toStartOf="@+id/redButton"
+        app:layout_constraintTop_toBottomOf="@+id/redButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
